@@ -2,6 +2,10 @@ body {
     margin: 60px auto;
     width: 70%;
 }
+footer {
+	border-top-width: 2px;
+	border-top-color: black;
+}
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
