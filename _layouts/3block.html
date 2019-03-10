@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="group">
+	<div class="menu">
+		
+		<img src= {{ page.logo }} class="logo" width=200>
+
+		<p><strong>Title: {{ page.title }} </strong></p>
+		<p><strong>Seat: {{ page.seat }}</strong></p>
+		<p><strong>Overlord: <a href= {{ '/charakters/'| append: page.overlord | downcase | append: '_' | append: page.name  }} >{{ page.overlord }} </strong></a></p>
+		<p><strong>Words: {{ page.words }}</strong></p>
+		<p><strong>Founder: {{ page.founder }}</strong></p>
+		<ul>
+			{% for house in site.houses %}
+				<li class="menuPolozka">
+					<img src= {{ '/images/'| append: house.name | append: '.jpg' }} class="houseLogo"> <a href= {{ house.url }} >{{ house.name }} </a>
+				</li>
+			{% endfor %}
+		</ul>
+		
+	</div>
+
+	<div class="houseArticle">
+		<img src= {{ page.photo }} width=600 class="background">
+		{{ page.content }}
+
+	</div>
+	
+</div>

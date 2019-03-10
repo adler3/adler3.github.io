@@ -1,15 +1,24 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<div class="group">
+	<article>
+		<img src= {{ page.picture }} width=565>
+		<h1> {{ page.title }} </h1>
+		{{ page.content }}
+	</article>
 
-<div class="post">
-	<h2 class="date"><info datetime="{{ page.date }}">
-		{{ page.date | date_to_string }} {% if page.author %} by {{ page.author }} {% endif %}
-	</info></h2>
-  {{ content }}
-  
-  {% include footer.html %}
+	<aside class="sidebar">
+		<div class="box" id="box1">
+			<img src= {{ '/images/'| append: page.1site | append: '.jpg' }} width=225>
+			<h1> {{ page.1site }} </h1>
+			
+		</div>
 
+		<div class="box" id="box2">
+			<img src= {{ '/images/'| append: page.2site | append: '.jpg' }} width=225>
+			<h1> {{ page.2site }} </h1>
+		
+		</div>
+	</aside>
 </div>

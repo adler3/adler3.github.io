@@ -1,0 +1,15 @@
+---
+layout: default
+title: Great Houses of Westeros
+---
+	<h1>{{ page.title }}</h1>
+	<ul class="posts">
+
+		{% for house in site.houses %}
+		<li class="xxx">
+			<img src= {{ house.logo }} class="houseLogo"> <a href= {{ house.url }} >{{ house.title }} </a>
+		</li>
+		{% endfor %}
+	</ul>
+	
+	
